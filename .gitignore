@@ -1,0 +1,6 @@
+# Dados baixados e arquivos derivados
+data/raw/
+data/processed/
+
+# Artefatos de notebooks
+.ipynb_checkpoints/
