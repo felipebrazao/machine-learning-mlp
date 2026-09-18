@@ -11,6 +11,13 @@
 
 > Antes de prosseguir com os experimentos, submeter esta proposta para validação da professora, conforme o enunciado.
 
+### Delimitação do escopo didático
+
+- O trabalho aplicará à regressão os procedimentos apresentados em sala: MLP densa em Keras, normalização, separação treino/validação/teste, `EarlyStopping`, validação cruzada e ajuste de hiperparâmetros.
+- A rede terá somente camadas densas e uma saída `Dense(1, activation="linear")`. Não serão usados modelos convolucionais, embeddings, ensembles ou arquiteturas mais complexas.
+- A adaptação necessária ao dataset real ficará restrita ao pré-processamento de atributos numéricos e categóricos e às métricas próprias de regressão: MAE, RMSE e R².
+- O TPE com Optuna será usado exclusivamente como comparação metodológica com a Random Search: ambos testarão o mesmo espaço de busca, a mesma validação e o mesmo orçamento. A apresentação explicará apenas que o TPE usa os resultados anteriores para escolher novas tentativas.
+
 ## 2. Organização do projeto e reprodutibilidade
 
 ```text
@@ -48,9 +55,9 @@ plan.md
 
 ## 5. MLP e busca de hiperparâmetros
 
-- Construir uma MLP de regressão com saída linear e `EarlyStopping`.
+- Construir uma MLP de regressão densa, com saída `Dense(1, activation="linear")` e `EarlyStopping`.
 - Aplicar **Random Search** com validação cruzada e orçamento de **25 configurações**.
-- Aplicar **TPE com Optuna** usando exatamente o mesmo espaço de busca, mesma validação, métrica e orçamento de **25 trials**.
+- Aplicar **TPE com Optuna** usando exatamente o mesmo espaço de busca, mesma validação, métrica e orçamento de **25 trials**, apenas para compará-lo à Random Search.
 
 Espaço inicial de busca:
 

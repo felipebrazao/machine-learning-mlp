@@ -4,3 +4,6 @@ data/processed/
 
 # Artefatos de notebooks
 .ipynb_checkpoints/
+
+# Ambiente virtual local
+.venv/
