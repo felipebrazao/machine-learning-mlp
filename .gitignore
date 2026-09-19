@@ -7,3 +7,9 @@ data/processed/
 
 # Ambiente virtual local
 .venv/
+
+# Artefatos locais do Python e do sistema
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
