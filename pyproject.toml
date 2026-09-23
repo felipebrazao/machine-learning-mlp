@@ -1,0 +1,21 @@
+[project]
+name = "vehicle-price-mlp"
+version = "0.1.0"
+description = "Experimentos de regressao de preco de veiculos com MLP"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "ipykernel==7.3.0",
+    "kagglehub==1.0.2",
+    "matplotlib==3.11.2",
+    "optuna==4.9.0",
+    "pandas==3.0.6",
+    "python-pptx==1.0.2",
+    "scikeras==0.13.0",
+    "scikit-learn==1.5.2",
+    "seaborn==0.13.2",
+    "tensorflow-cpu==2.19.1",
+]
+
+[tool.uv]
+package = false
+environments = ["sys_platform == 'linux'"]
